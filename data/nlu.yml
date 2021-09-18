@@ -1,0 +1,135 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Ad ơi
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: Admissions
+  examples: |
+    - Khoa hệ thống thông tin chỉ tiêu tuyển sinh năm nay là bao nhiêu ạ?
+    - Chỉ tiêu cho xét tuyểt học bạ khoa mình là bao nhiêu ạ?
+    - Xét tuyển kết hợp với chứng chỉ tiếng anh thì cơ hộ đỗ là bao nhiêu ạ?
+    - Tuyển thẳng chiếm bao nhiêu phần trăm chỉ tiêu ạ?
+    - xét tuyển dựa trên kết quả học tập THPT là bao nhiêu ạ?
+
+- intent: education_program
+  examples: |
+    - Chương trình đào tạo của khoa như nào ạ?
+    - Tỷ lệ kiến thức về kinh tế chiếm bao nhiêu phần trăm tổng chương trình học vậy ạ?
+    
+- intent: tuition
+  examples: |
+    - Học phí của trường là bao nhiêu ạ?
+    - Học phí có tăng so với năm trước không ạ?
+
+- intent: job
+  examples: |
+    - Học hệ thống thông tin quản lý ra trường làm gì ạ?
+    - Công việc cho ngành này như thế nào ạ?
+    - Có thể làm trong lĩnh vực nào nếu học khoa mình ra ạ?
+
+- intent: no_ans
+  examples: |
+    - Không ạ
+    - No
+    - N
+    - Hết rồi ạ
+
+- intent: thanks
+  examples: |
+    - Cảm ơn ad đã tư vấn ạ.
+    - Cảm ơn ad nhiều ạ
+
+- intent: give_name
+  examples: |
+   - [Anh](cust_sex) là [Chồng](cust_name)
+   - [Em](cust_sex) là [Vợ](cust_name)
+   - [Em](cust_sex) tên là [baby](cust_name)

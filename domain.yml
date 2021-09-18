@@ -1,0 +1,75 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - give_name
+  - education_program
+  - Admissions
+  - tuition
+  - job
+  - no_ans
+  - thanks
+
+
+entities:
+  - cust_sex
+  - cust_name
+
+slots:
+  cust_sex:
+    auto_fill: true
+    type: text
+  cust_name:
+    auto_fill: true
+    type: text
+
+responses:
+  utter_greet:
+  # - text: "Hey! How are you?"
+  - text: "Hi! Bạn có thể cho mình biết tên của bạn được không?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  # - text: "Did that help you?"
+    - text: "Bạn còn thắc mắc gì nữa không ạ?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Chúc bạn gặp nhiều may mắn!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_education_program:
+  - text: "Chương trình đào tạo của khoa Mis đào tạo hai lĩnh vực nghiệp vụ và kỹ thuật (50% kinh tế, 50% CNTT). Khoa đào tạo chuyên sâu 2 chuyên ngành: Hệ thống thông tin doanh nghiệp và hệ thống thông tin ngân hàng."
+
+  utter_Admissions:
+  - text: "Chỉ tiêu tuyển sinh năm nay của khoa là 100. Trong đó tuyển thẳng chiếm tối đa 5%, xét dựa trên kết quả học tập THPT tối đa 25%, xét dựa vào chứng chỉ ngoại ngữ tối đa 10% trong tổng số chỉ tiêu của cả học viện"
+
+  utter_tuition:
+  - text: "Học phí của hệ chính quy hệ đại học hiện là 290.000đ/tín, hệ cao đẳng là: 213.000đ/tín. Để biết thêm thông tin chi tiết bạn có thể truy cập địa chỉ: https://hvnh.edu.vn/tckt/vi/hoc-phi/muc-thu-hoc-phi-dich-vu-khac-cho-cac-he-dao-tao-nam-hoc-2021-2022-58.html"
+
+  utter_job:
+  - text: "Một số vị trí việc làm tiêu biểu khi học khoa hệ thống thông tin quản lý như: Phân tích nghiệp vụ, phân tích dữ liệu kinh doanh, quản trị dữ liệu, phân tích và phát triển hệ thống thông tin kinh tế, kiểm thử phần mềm, phát triển phần mềm..."
+
+  utter_thank:
+  - text: "Cảm ơn bạn đã quan tâm khoa hệ thống thông tin. Nếu có thắc mắc bạn hãy nói cho mình biết nhé."
+
+  utter_greet_with_name:
+  - text: "Chào {cust_sex} {cust_name} nhé, mình có thể giúp gì được cho bạn? "
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
