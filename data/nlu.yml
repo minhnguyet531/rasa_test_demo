@@ -128,8 +128,10 @@ nlu:
     - Cảm ơn ad đã tư vấn ạ.
     - Cảm ơn ad nhiều ạ
 
-- intent: give_name
+- intent: out_of_scope
   examples: |
-   - [Anh](cust_sex) là [Chồng](cust_name)
-   - [Em](cust_sex) là [Vợ](cust_name)
-   - [Em](cust_sex) tên là [baby](cust_name)
+    - Ad ăn cơm chưa?
+    - Ad có tạch môn nào trong quá trình học chưa ạ?
+    - Tào lao
+    - sdgsahduad adakdua
+    - Anh có người yêu chưa

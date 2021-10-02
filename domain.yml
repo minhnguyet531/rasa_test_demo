@@ -8,38 +8,35 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - give_name
   - education_program
   - Admissions
   - tuition
   - job
   - no_ans
   - thanks
-
+  - out_of_scope
 
 entities:
-  - cust_sex
-  - cust_name
+  - name
+ 
 
 slots:
-  cust_sex:
-    auto_fill: true
+  name:
     type: text
-  cust_name:
-    auto_fill: true
+  surname:
     type: text
-
+  
+    
 responses:
   utter_greet:
-  # - text: "Hey! How are you?"
   - text: "Hi! Bạn có thể cho mình biết tên của bạn được không?"
+  - text: "Hi! Mình có thể giúp gì được cho bạn?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  # - text: "Did that help you?"
     - text: "Bạn còn thắc mắc gì nữa không ạ?"
 
   utter_happy:
@@ -67,8 +64,24 @@ responses:
   utter_thank:
   - text: "Cảm ơn bạn đã quan tâm khoa hệ thống thông tin. Nếu có thắc mắc bạn hãy nói cho mình biết nhé."
 
-  utter_greet_with_name:
-  - text: "Chào {cust_sex} {cust_name} nhé, mình có thể giúp gì được cho bạn? "
+  utter_out_of_scope:
+  - text: "Xin lỗi câu hỏi của bạn ngoài phạm vi cung cấp thông tin của chúng tôi. Chúng tôi sẽ cố cập nhật thông tin sớm nhất để phù hợp với câu hỏi của bạn. Bạn còn câu hỏi khác không ạ?"
+
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_education_program
+- utter_Admissions
+- utter_tuition
+- utter_job
+- utter_thank
+- utter_out_of_scope
+- action_name
 
 session_config:
   session_expiration_time: 60
