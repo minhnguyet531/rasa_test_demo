@@ -104,17 +104,24 @@ nlu:
   examples: |
     - Chương trình đào tạo của khoa như nào ạ?
     - Tỷ lệ kiến thức về kinh tế chiếm bao nhiêu phần trăm tổng chương trình học vậy ạ?
+    - có sự thay đổi trong khung chương trình đào tạo không ạ
+    - chương trình đào tạo có điều gì khác biệt không ạ
     
 - intent: tuition
   examples: |
     - Học phí của trường là bao nhiêu ạ?
     - Học phí có tăng so với năm trước không ạ?
+    - học phí
+    - em muốn biết thông tin về học phí
+    - học phí có thay đổi gì không ạ?
 
 - intent: job
   examples: |
     - Học hệ thống thông tin quản lý ra trường làm gì ạ?
     - Công việc cho ngành này như thế nào ạ?
     - Có thể làm trong lĩnh vực nào nếu học khoa mình ra ạ?
+    - ngành này có thể đảm nhiệm những công việc nào
+    - làm được gì khi học khoa hệ thống ra ạ
 
 - intent: no_ans
   examples: |
@@ -127,6 +134,7 @@ nlu:
   examples: |
     - Cảm ơn ad đã tư vấn ạ.
     - Cảm ơn ad nhiều ạ
+    - thanks
 
 - intent: out_of_scope
   examples: |
@@ -135,3 +143,5 @@ nlu:
     - Tào lao
     - sdgsahduad adakdua
     - Anh có người yêu chưa
+    - Hư a phạt
+    - láo nháo
