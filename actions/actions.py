@@ -71,15 +71,16 @@ class GetName(Action):
 		
 	)-> List[EventType]:
 		import requests
-		# fb_access_token = ("EAAGYniiVkQMBACacedTZCTM24m0UvTkqpJ30idc0e36AatOoCuYdo8UTxTQDglDNYwuNOVXYxFZBCPelLU70AnUKqPbk8ZCSxSs0yJ1VPApLjJRCzVZCU3fuwbgqzyD1SZB7ZBWVhwZCJH4JhUrk1zFrC0fvSQcfnxrRNV3OWlgrvVeYew3ZBzK4T9jV9g2GXUkZD")
-		fb_access_token = ("EAALpq0lPXikBAJiPClUSEKHf3RQT7cKw2xKdsN9al78Blrdn812enytGEwKuZACAiJK4TN6mQkC6ZA2K1F2GSfLuZATcDrbBEZA99JImvJrFnCtdUjzy78Vc6DWwYMpSPdgQuNopmA4ZB7MgMwmX4dSw1M0ycHalsnmq3qkLMB7eVCFXacQiz")
+		# fb_access_token = ("EAAGYniiVkQMBACTLOlx4xK76k7UcoITqVbjIODjhZAa10lE0ul7Q4nW8EAhwFA5UCoCLRpyksRZB3Rroi1ln4OZB8VR11KyE2AVaC0fQgOaLDIGwBdvHX8xNvgkSsOKVavEghKcHabZACkqYB1LlmnfuRKvPZCZCRCbybzD4ZBon9bxvHir7ao845eXG7gATxkZD")
+		fb_access_token = ("EAALpq0lPXikBABYnERvexP3qzunbZCGLv1VWkwFleRUSHmA6A7oiKCIxn6FG9yLq6FuEdnNpEJdMMHDRdIGng4Qb2PgpIRNh54gLldeolofzZAIY8BfNzF4tMFa2zDGrD0Y8H7Y4oDLyCmZAqmqdTlQtJuszZAsezfKZAZBOxd9E6man9g7XwD")
 		
 		most_recent_state = tracker.current_state()
 		sender_id = most_recent_state['sender_id']
 		
-		r = requests.get('https://graph.facebook.com/{}?fields=first_name,last_name&access_token={}'.format(sender_id, fb_access_token)).json()
+		r = requests.get('https://graph.facebook.com/{}?fields=first_name,middle_name,last_name&access_token={}'.format(sender_id, fb_access_token)).json()
 		first_name = r["first_name"]
+		middle_name = r["middle_name"]
 		last_name = r["last_name"]
 		
-		dispatcher.utter_message("Chào {} {} nhé, mình có thể giúp gì được cho bạn?' ".format(first_name, last_name))
+		dispatcher.utter_message("Chào {} {} {} nhé, mình có thể giúp gì được cho bạn?' ".format(last_name, middle_name, first_name))
 		# return [SlotSet('name', first_name), SlotSet('surname', last_name)]
